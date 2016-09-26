@@ -1,4 +1,5 @@
 #include <iostream>
+#include <syslib.h>
 #include <sstream>
 #include <cmath>
 using namespace std;
@@ -7,6 +8,8 @@ int main(int argc, char const *argv[])
 	unsigned int input;
 	stringstream result("");
 	cin >> input;
+	if(input<=1)
+		exit(failed_in_testing_primality);
 	int INPUT = input;
 	while(input%2==0){
 		if (input==INPUT)
