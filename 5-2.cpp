@@ -5,10 +5,10 @@
 using namespace std;  
 void pt(int a){
 	switch(a){
-		case 0: cout <<"Ã·»¨";break;
-		case 1: cout <<"·½¿é";break;
-		case 2: cout <<"ºìÌÒ";break;
-		case 3: cout <<"ºÚÌÒ";break;
+		case 0: cout <<"æ¢…èŠ±";break;
+		case 1: cout <<"æ–¹å—";break;
+		case 2: cout <<"çº¢æ¡ƒ";break;
+		case 3: cout <<"é»‘æ¡ƒ";break;
 	}
 }
 void ptd(int b){
@@ -42,13 +42,13 @@ int main(){
 	srand((int)time(0));
 	for(int i = 0 ; i < 52 ; i++){
 		int tmp = myrand();
-		if(flag[tmp]){
+		if(flag[tmp-1]){
 			i--;
 			continue;
 		}
 		else{
-			flag[tmp]=true;
-			prtsq(tmp);
+			flag[tmp-1]=true;
+			prtsq(tmp-1);
 			cout<<endl;
 		}
 	}
